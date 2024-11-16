@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.LocalDateTime;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class PessoaTeste {
@@ -21,6 +22,9 @@ public class PessoaTeste {
 	void deveRetornarSeEhMaior() {
 		Pessoa jessica = new Pessoa("Jéssica", LocalDateTime.of(2000, 1, 1, 15, 0));
 		assertTrue(jessica.ehMaiorDeIdade());
+		
+		Pessoa joao = new Pessoa("João", LocalDateTime.now());
+		Assertions.assertTrue(joao.ehMaiorDeIdade());
 		
 		
 	}
